@@ -1,3 +1,7 @@
 java/jetty/bin/
 java/.metadata/
+java/jetty/.settings/
+java/jetty/.classpath
+java/jetty/.projects
+.gitignore
 
