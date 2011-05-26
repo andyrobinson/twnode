@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app>
+  <display-name>Example</display-name>
+
+  <!-- Declare the existence of a servlet. -->
+  <servlet>
+    <servlet-name>ServletWithExternalData</servlet-name>
+    <servlet-class>ServletWithExternalData</servlet-class>
+  </servlet>
+
+  <!-- Declare the existence of a servlet. -->
+  <servlet>
+    <servlet-name>BusyWaitingServlet</servlet-name>
+    <servlet-class>BusyWaitingServlet</servlet-class>
+  </servlet>
+
+  <!-- Map URLs to that servlet. -->
+  <servlet-mapping>
+    <servlet-name>ServletWithExternalData</servlet-name>
+    <url-pattern>/dep</url-pattern>
+  </servlet-mapping>
+
+  <!-- Map URLs to that servlet. -->
+  <servlet-mapping>
+    <servlet-name>BusyWaitingServlet</servlet-name>
+    <url-pattern>/busy</url-pattern>
+  </servlet-mapping>
+
+</web-app>
