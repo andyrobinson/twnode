@@ -7,7 +7,7 @@ http.createServer(function (request, response) {
   response.write('ACME Data Server - your data\n');
 
   setTimeout(function() {
-	  response.end('...only slower\n')
+	  response.end('... only slower\n')
   }, 1000);
 
 }).listen(port, "127.0.0.1");
