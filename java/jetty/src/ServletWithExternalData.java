@@ -13,7 +13,7 @@ public class ServletWithExternalData extends HttpServlet {
 
 		PrintWriter out = resp.getWriter();
 		
-		out.println("<html>\n<body>\n<h1>Hello from Servlet with Dependency</h1>");
+		out.println("<html>\n<body>\n<h1>Hello from Servlet with External Data</h1>");
 		out.println((new SimpleHttpClient()).get("http://127.0.0.1:8001/"));
 		out.println("</body>\n</html>");
 	}

@@ -17,7 +17,7 @@
   <!-- Map URLs to that servlet. -->
   <servlet-mapping>
     <servlet-name>ServletWithExternalData</servlet-name>
-    <url-pattern>/dep</url-pattern>
+    <url-pattern>/data</url-pattern>
   </servlet-mapping>
 
   <!-- Map URLs to that servlet. -->

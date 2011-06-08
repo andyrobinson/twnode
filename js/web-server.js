@@ -22,7 +22,7 @@ webserver = {
 			});
 		
 			serverResponse.on('end', function() {
-		  		response.end('After data server response\n')		
+		  		response.end('After data server response\n</body>\n</html>\n')		
 			});
 		});
 	},
@@ -40,8 +40,9 @@ webserver = {
 	
 	responder: function (request, response) {
 
-  		response.writeHead(200, {'Content-Type': 'text/plain'});
-  		response.write('Start web request\n');
+  		response.writeHead(200, {'Content-Type': 'text/html'});
+  		response.write('<html>\n');
+  		response.write('<body>\n<p>Start web request</p>\n');
         
         pathname = url.parse(request.url).pathname;
         
@@ -51,9 +52,9 @@ webserver = {
 		} else if (pathname === '/node/busy') {
 		  	response.write('Busy waiting ....\n');
 		  	webserver.waitFor(1000);
-  			response.end('Finished busy waiting\n');
+  			response.end('Finished busy waiting\n</body>\n</html>\n');
 		} else {
-			response.end('unknown path\n');
+			response.end('unknown path\n</body>\n</html>\n');
 		}
 	}
 }
