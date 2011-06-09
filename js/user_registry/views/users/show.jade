@@ -1,0 +1,13 @@
+h2 User Details
+p.view_user 
+	span.user_details 
+		i 
+			b Name: 
+		span #{userData.name} 
+	br
+	span.user_details 
+		i 
+			b Email: 
+		span #{userData.email}
+p
+	a.link(href='/users') Return to users list

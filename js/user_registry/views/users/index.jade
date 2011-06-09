@@ -1,0 +1,25 @@
+h2 Welcome to the User list page
+br
+a.link(href='/users/new', id='new_user') Create new User 
+br
+br
+br
+- var tr_class = 'even';
+table#users_list
+	thead
+		th Id
+		th Name
+		th email
+		th actions
+	- each user in users
+		- tr_class == 'odd' ? tr_class = 'even' : tr_class = 'odd';
+		tr(class='#{tr_class}')
+			td= user.id
+			td= user.name
+			td= user.email
+			td.actions 
+				a(href='/users/'+user.id) View
+				a(href='/users/'+user.id+'/edit') Edit
+				form(action='/users/delete', method='post')
+					input(type='hidden', name='user[id]', value=user.id)
+					input(type='submit', value='Delete')

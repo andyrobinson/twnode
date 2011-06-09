@@ -1,0 +1,25 @@
+!!!
+html
+  head
+    title User Registry System :: #{title}
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    script(type='text/javascript', src='/javascripts/jquery-1.6.1.js')
+    script(type='text/javascript', src='/javascripts/require.js')
+    script(type='text/javascript', src='/javascripts/validation/username_validator.js')
+    script(type='text/javascript', src='/javascripts/validation/email_validator.js')
+    
+    script(type='text/javascript', src='/javascripts/validation/user_validator.js')        
+    script(type='text/javascript', src='/javascripts/start.js')    
+  body
+    #top
+      h1 User Registry System
+    #content
+      - var error = error || "";
+      - var success_message = success_message || "";    
+      - if(error != "")
+        h2
+          font(color='red') Error: #{error}
+      - if(success_message != "")
+        h2
+          font(color='green') #{success_message}
+      != body

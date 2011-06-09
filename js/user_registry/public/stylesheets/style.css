@@ -1,0 +1,110 @@
+body {
+  font: 13px/1.5 Helvetica Neue,Arial,Helvetica,'Liberation Sans',FreeSans,sans-serif;
+  background: #F5F6F7 url('/images/bkg.jpeg') repeat-x 0 0;
+}
+
+#content {
+  padding: 50px; 
+  color: #333;
+}
+
+a {
+  color: #00B7FF;
+}
+
+#top {
+	padding: 5px 0px 5px 20px;
+	height: 100px;
+	background: url('/images/bg_header.png') bottom repeat-x;
+}
+
+table{
+	width: 800px;
+	margin: 0 -2px;
+	border: 1px solid #D7D7D7;
+}
+
+fieldset{
+	display: block;
+}
+
+label {
+	color: #777;
+}
+
+.input input{
+	display:block;
+	border: 1px solid #CCC;
+	font:13px Arial,sans-serif;	
+	width: 296px;
+	font-size: 18px;
+	height: 30px;
+	border-color:#999;
+}
+
+.actions {
+	padding: 5px 0px 5px 20px;
+}
+
+
+.actions a, input[type='submit']{
+	font: 13px/1.5 Helvetica Neue,Arial,Helvetica,'Liberation Sans',FreeSans,sans-serif;
+    text-decoration: none;
+    background-color: #EEEEEE;
+    color: #333333;
+    padding: 5px 10px 5px 10px;
+    border-top: 1px solid #CCCCCC;
+    border-right: 1px solid #333333;
+    border-bottom: 1px solid #333333;
+    border-left: 1px solid #CCCCCC;
+	float:left;
+}
+
+.actions a{
+	margin-top:2px;
+}
+
+thead{
+	display: table-header-group;
+	vertical-align: middle;
+	border-color: inherit;
+}
+td{
+	padding-left: 10px;
+}
+th {
+	background-color: #F4F4F4;
+	font-size: 20px;
+}
+.even{
+	background-color: #F4F4F4;
+}
+
+.view_user{
+	border: 1px solid #CCC;
+	padding: 10px;
+	width: 50%;
+}
+.user_details{
+	display:block;
+	font:13px Arial,sans-serif;	
+	font-size: 18px;
+	margin: 5px 0px 5px 0px;
+}
+
+a.link{
+	font-size: 30px Helvetica Neue,Arial,Helvetica,'Liberation Sans',FreeSans,sans-serif;
+    text-decoration: none;
+    background-color: #444;
+    color: #DDD;
+    padding: 5px 30px 5px 30px;
+	margin: 10px 5px 10px 5px;
+    border-top: 1px solid #CCCCCC;
+    border-right: 1px solid #333333;
+    border-bottom: 1px solid #333333;
+    border-left: 1px solid #CCCCCC;
+}
+
+h1{
+	font-size: 40px;
+}

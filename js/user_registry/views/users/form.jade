@@ -1,0 +1,16 @@
+form(id='user_form', action='/users/', method='POST')
+  input(type='hidden', name='user[id]', value=userData.id)
+  span Please enter your details:
+  fieldset
+    label.username
+      span Username:
+      .input
+        input(name='user[name]', value=userData.name)
+    label
+      span Email:
+      .input
+        input(name='user[email]', value=userData.email)
+    br
+    label.actions
+      input(type='Submit', value='Save')
+      a(href='/users') Cancel      
