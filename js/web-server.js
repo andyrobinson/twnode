@@ -1,31 +1,11 @@
 http = require('http');
 url = require('url');
+require('./httppassthru.js')
 
 webserver = {
 
 	port: 8002,
-
-    makeClientRequest: function() {
-		var slowServer = http.createClient(8001, '127.0.0.1');
-		var request = slowServer.request('GET', '/');
-		request.end();
-		return request;
-    },
-
-	getDataServerResponse: function(response) {
-
-		request = webserver.makeClientRequest();
-	
-		request.on('response', function (serverResponse) {
-			serverResponse.on('data', function (chunk) {
-    			response.write(chunk);
-			});
-		
-			serverResponse.on('end', function() {
-		  		response.end('After data server response\n</body>\n</html>\n')		
-			});
-		});
-	},
+    dataServerConnection: http.createClient(8001, '127.0.0.1'),
 
 	waitFor: function(milliseconds) {
 		var now = new Date();
@@ -48,7 +28,10 @@ webserver = {
         
         if (pathname === '/node/data') {
   			response.write('Call to data service\n');
-  			webserver.getDataServerResponse(response);
+
+  			var client = new HttpPassThru(response, webserver.dataServerConnection);
+			client.passThru('After data server response\n</body>\n</html>\n');
+			
 		} else if (pathname === '/node/busy') {
 		  	response.write('Busy waiting ....\n');
 		  	webserver.waitFor(1000);
